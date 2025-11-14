@@ -134,14 +134,14 @@ function renderProductsGrid(containerId = 'product-container', list = products) 
       <a href="product.html?id=${p.id}" class="block">
         <img src="${p.image}" alt="${p.name}" loading="lazy" class="w-full h-44 object-cover">
       </a>
-      <div class="p-4">
-        <a href="product.html?id=${p.id}" class="text-lg font-semibold text-gray-900 hover:underline">${p.name}</a>
-        <p class="text-sm text-gray-500">${p.category}</p>
-        <div class="mt-3 flex items-center justify-between">
-          <div class="font-bold text-indigo-700">${formatPrice(p.price)}</div>
-          <button onclick="addToCart(${p.id},1)" class="bg-indigo-600 text-white px-3 py-1 rounded">Add</button>
+        <div class="p-4">
+          <a href="product.html?id=${p.id}" class="text-lg font-semibold text-gray-900 hover:underline">${p.name}</a>
+          <p class="text-sm text-gray-500">${p.category}</p>
+          <div class="mt-3 flex flex-col sm:flex-row items-center sm:justify-between gap-2">
+            <div class="font-bold text-indigo-700">${formatPrice(p.price)}</div>
+            <button onclick="addToCart(${p.id},1)" class="bg-indigo-600 text-white px-3 py-1 rounded w-full sm:w-auto">Add</button>
+          </div>
         </div>
-      </div>
     `;
 
     container.appendChild(card);
@@ -232,10 +232,10 @@ function renderProductDetail() {
       <p class="text-sm text-gray-500 mb-4">Category: ${p.category}</p>
       <div class="text-2xl font-extrabold text-indigo-700 mb-4">${formatPrice(p.price)}</div>
       <p class="text-gray-700 mb-4">${p.description}</p>
-      <div class="flex gap-2 items-center">
+      <div class="flex flex-col sm:flex-row gap-2 items-center">
         <label for="qty" class="sr-only">Quantity</label>
         <input id="qty" type="number" value="1" min="1" class="w-20 px-2 py-1 border rounded" />
-        <button id="add-to-cart-btn" class="bg-indigo-600 text-white px-4 py-2 rounded">Add to cart</button>
+        <button id="add-to-cart-btn" class="bg-indigo-600 text-white px-4 py-2 rounded w-full sm:w-auto">Add to cart</button>
       </div>
     </div>
   `;
@@ -260,8 +260,8 @@ function renderCart() {
   el.innerHTML = '';
   cart.forEach(item => {
     total += item.price * item.qty;
-    const row = document.createElement('div');
-    row.className = 'flex items-center gap-4 border-b py-4';
+  const row = document.createElement('div');
+  row.className = 'flex flex-col sm:flex-row items-center gap-4 border-b py-4';
     row.innerHTML = `
       <img src="${item.image}" alt="${item.name}" class="w-24 h-24 object-cover rounded">
       <div class="flex-1">
@@ -446,6 +446,7 @@ function init() {
   if (document.getElementById('categories-list') || document.getElementById('category-products')) {
     initCategoriesPage();
   }
+
 
   // Newsletter forms handling (homepage and footer)
   if (document.getElementById('newsletter-form')) {
