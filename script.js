@@ -5,16 +5,56 @@
 */
 
 const products = [
-  { id: 1, name: "Drill Machine", category: "Hardware", price: 2499, image: "https://picsum.photos/seed/drill/600/400", description: "Powerful cordless drill for all household tasks. Includes 2 batteries and charger." },
-  { id: 2, name: "Hammer", category: "Hardware", price: 499, image: "https://picsum.photos/seed/hammer/600/400", description: "Durable claw hammer with shock-absorbing grip." },
-  { id: 3, name: "Paint Bucket 5L", category: "Paints", price: 1199, image: "https://picsum.photos/seed/paint/600/400", description: "Premium interior paint, washable and low VOC. Covers approx. 40-50 sqm." },
-  { id: 4, name: "LED Bulb", category: "Electricals", price: 299, image: "https://picsum.photos/seed/bulb/600/400", description: "Energy-efficient LED bulb, 9W equivalent, warm white." },
-  { id: 5, name: "Wrench Set", category: "Hardware", price: 899, image: "https://picsum.photos/seed/wrench/600/400", description: "Metric wrench set in sturdy carrying case." },
-  { id: 6, name: "Screwdriver Set", category: "Hardware", price: 699, image: "https://picsum.photos/seed/screwdriver/600/400", description: "10-piece screwdriver set for precision and power tasks." },
-  { id: 7, name: "Floor Paint 10L", category: "Paints", price: 3599, image: "https://picsum.photos/seed/floorpaint/600/400", description: "High-durability floor paint for garages and workshops." },
-  { id: 8, name: "Extension Cord 5m", category: "Electricals", price: 899, image: "https://picsum.photos/seed/cord/600/400", description: "Safe, heavy-duty extension cord with grounding." },
-  { id: 9, name: "Ladder 6ft", category: "Hardware", price: 2599, image: "https://picsum.photos/seed/ladder/600/400", description: "Lightweight aluminum ladder with anti-slip feet." },
-  { id: 10, name: "Brush Set", category: "Paints", price: 249, image: "https://picsum.photos/seed/brush/600/400", description: "Set of 3 brushes for trims and corners." }
+  // Hardware (15)
+  { id: 1, name: "Cordless Drill", category: "Hardware", price: 2499, image: "https://picsum.photos/seed/cordless-drill/600/400", description: "Compact cordless drill with two-speed gearbox and two batteries." },
+  { id: 2, name: "Claw Hammer", category: "Hardware", price: 499, image: "https://picsum.photos/seed/claw-hammer/600/400", description: "Steel head claw hammer with ergonomic non-slip handle." },
+  { id: 3, name: "Wrench Set (10pc)", category: "Hardware", price: 899, image: "https://picsum.photos/seed/wrench-set/600/400", description: "Chrome vanadium wrench set in a compact roll-up pouch." },
+  { id: 4, name: "Screwdriver Set (10pc)", category: "Hardware", price: 699, image: "https://picsum.photos/seed/screwdriver-set/600/400", description: "Magnetic tips and comfortable handles for precision work." },
+  { id: 5, name: "Pliers Set", category: "Hardware", price: 599, image: "https://picsum.photos/seed/pliers/600/400", description: "Includes needle-nose, cutting and slip-joint pliers." },
+  { id: 6, name: "Tape Measure 8m", category: "Hardware", price: 249, image: "https://picsum.photos/seed/tape-measure/600/400", description: "Durable tape measure with easy-lock and belt clip." },
+  { id: 7, name: "Utility Knife", category: "Hardware", price: 199, image: "https://picsum.photos/seed/utility-knife/600/400", description: "Retractable blade with quick-change mechanism." },
+  { id: 8, name: "Toolbox (Steel)", category: "Hardware", price: 1999, image: "https://picsum.photos/seed/toolbox/600/400", description: "Heavy-duty steel toolbox with removable tray and lockable latch." },
+  { id: 9, name: "Socket Set (24pc)", category: "Hardware", price: 2199, image: "https://picsum.photos/seed/socket-set/600/400", description: "Full metric socket set with ratchet and extensions." },
+  { id: 10, name: "Adjustable Spanner", category: "Hardware", price: 349, image: "https://picsum.photos/seed/spanner/600/400", description: "Adjustable spanner with precision jaws and chrome finish." },
+  { id: 11, name: "Box of Nails (1kg)", category: "Hardware", price: 149, image: "https://picsum.photos/seed/nails/600/400", description: "High-quality steel nails for general construction." },
+  { id: 12, name: "Bolts & Nuts Kit", category: "Hardware", price: 299, image: "https://picsum.photos/seed/bolts/600/400", description: "Mixed sizes of bolts, nuts and washers in a sturdy box." },
+  { id: 13, name: "6ft Aluminum Ladder", category: "Hardware", price: 2599, image: "https://picsum.photos/seed/aluminum-ladder/600/400", description: "Lightweight, foldable ladder with anti-slip feet." },
+  { id: 14, name: "Hand Saw", category: "Hardware", price: 399, image: "https://picsum.photos/seed/hand-saw/600/400", description: "Durable hand saw for wood cutting with comfortable grip." },
+  { id: 15, name: "Chisel Set", category: "Hardware", price: 549, image: "https://picsum.photos/seed/chisel/600/400", description: "Set of hardened steel chisels for woodworking and masonry." },
+
+  // Paints (15)
+  { id: 16, name: "Interior Paint 5L", category: "Paints", price: 1199, image: "https://picsum.photos/seed/interior-paint/600/400", description: "Premium washable interior emulsion with low VOC." },
+  { id: 17, name: "Floor Paint 10L", category: "Paints", price: 3599, image: "https://picsum.photos/seed/floor-paint/600/400", description: "Durable floor paint suitable for garage and workshop floors." },
+  { id: 18, name: "Brush Set (3pc)", category: "Paints", price: 249, image: "https://picsum.photos/seed/brush-set/600/400", description: "Quality nylon and natural bristle brushes for smooth finishes." },
+  { id: 19, name: "Roller Kit", category: "Paints", price: 349, image: "https://picsum.photos/seed/roller/600/400", description: "Roller set with tray and extension handle for ceilings and walls." },
+  { id: 20, name: "Primer 5L", category: "Paints", price: 899, image: "https://picsum.photos/seed/primer/600/400", description: "Universal primer for better adhesion and longer-lasting finish." },
+  { id: 21, name: "Exterior Paint 10L", category: "Paints", price: 3999, image: "https://picsum.photos/seed/exterior-paint/600/400", description: "Weather-resistant exterior paint with UV protection." },
+  { id: 22, name: "Wood Stain 2L", category: "Paints", price: 799, image: "https://picsum.photos/seed/wood-stain/600/400", description: "Penetrating wood stain that enhances grain and durability." },
+  { id: 23, name: "Spray Paint (Assorted)", category: "Paints", price: 299, image: "https://picsum.photos/seed/spray-paint/600/400", description: "High-coverage spray paint for metal and plastic surfaces." },
+  { id: 24, name: "Paint Thinner 1L", category: "Paints", price: 199, image: "https://picsum.photos/seed/thinner/600/400", description: "Solvent for cleaning brushes and thinning oil-based paints." },
+  { id: 25, name: "Painter's Tape", category: "Paints", price: 149, image: "https://picsum.photos/seed/tape/600/400", description: "Low-residue tape for crisp paint lines and masking." },
+  { id: 26, name: "Putty 1kg", category: "Paints", price: 199, image: "https://picsum.photos/seed/putty/600/400", description: "Ready-mix putty for surface repairs and smoothing walls." },
+  { id: 27, name: "Sandpaper Pack", category: "Paints", price: 129, image: "https://picsum.photos/seed/sandpaper/600/400", description: "Assorted grit sandpaper set for preparation and finishing." },
+  { id: 28, name: "Gloss Paint 1L", category: "Paints", price: 549, image: "https://picsum.photos/seed/gloss-paint/600/400", description: "High-gloss enamel for trims and cabinets." },
+  { id: 29, name: "Emulsion 10L", category: "Paints", price: 2999, image: "https://picsum.photos/seed/emulsion/600/400", description: "Matte emulsion for large interior surfaces; easy to apply." },
+  { id: 30, name: "Paint Tray Set", category: "Paints", price: 199, image: "https://picsum.photos/seed/paint-tray/600/400", description: "Reusable paint tray with liner for easy cleanup." },
+
+  // Electricals (15)
+  { id: 31, name: "LED Bulb 9W", category: "Electricals", price: 299, image: "https://picsum.photos/seed/led-bulb/600/400", description: "Energy-efficient LED bulb, warm white, long life." },
+  { id: 32, name: "Extension Cord 5m", category: "Electricals", price: 899, image: "https://picsum.photos/seed/extension-cord/600/400", description: "Heavy-duty extension cord with grounded plug and surge protection." },
+  { id: 33, name: "Wall Socket Outlet", category: "Electricals", price: 249, image: "https://picsum.photos/seed/socket/600/400", description: "Standard 3-pin wall socket outlet with safety shutter." },
+  { id: 34, name: "Ceiling Fan 48in", category: "Electricals", price: 3499, image: "https://picsum.photos/seed/ceiling-fan/600/400", description: "Quiet, energy-efficient ceiling fan with remote control." },
+  { id: 35, name: "Table Fan 16in", category: "Electricals", price: 1299, image: "https://picsum.photos/seed/table-fan/600/400", description: "Adjustable table fan with multiple speed settings." },
+  { id: 36, name: "Rechargeable Lantern", category: "Electricals", price: 799, image: "https://picsum.photos/seed/lantern/600/400", description: "Portable LED lantern with USB charging and long battery life." },
+  { id: 37, name: "Circuit Breaker 20A", category: "Electricals", price: 499, image: "https://picsum.photos/seed/circuit-breaker/600/400", description: "Miniature circuit breaker for household electrical panels." },
+  { id: 38, name: "Copper Wire 50m", category: "Electricals", price: 1599, image: "https://picsum.photos/seed/copper-wire/600/400", description: "High-quality insulated copper wire for electrical installations." },
+  { id: 39, name: "Smart Bulb (WiFi)", category: "Electricals", price: 899, image: "https://picsum.photos/seed/smart-bulb/600/400", description: "Color-changing smart bulb controlled via app or voice assistant." },
+  { id: 40, name: "Dimmer Switch", category: "Electricals", price: 599, image: "https://picsum.photos/seed/dimmer/600/400", description: "Wall-mounted dimmer switch compatible with LED lights." },
+  { id: 41, name: "Power Strip (6-way)", category: "Electricals", price: 449, image: "https://picsum.photos/seed/power-strip/600/400", description: "Surge-protected power strip with individual switches." },
+  { id: 42, name: "Fuse Pack (assorted)", category: "Electricals", price: 179, image: "https://picsum.photos/seed/fuse/600/400", description: "Assorted automotive and mains fuses in a handy pack." },
+  { id: 43, name: "LED Downlight 6W", category: "Electricals", price: 349, image: "https://picsum.photos/seed/downlight/600/400", description: "Recessed LED downlight with cool white output." },
+  { id: 44, name: "Light Fixture - Pendant", category: "Electricals", price: 1299, image: "https://picsum.photos/seed/pendant/600/400", description: "Stylish pendant light suitable for dining and kitchen islands." },
+  { id: 45, name: "Inverter Battery 12V", category: "Electricals", price: 5999, image: "https://picsum.photos/seed/inverter-battery/600/400", description: "Maintenance-free inverter battery for backup power." }
 ];
 
 // Formatting utility
@@ -111,6 +151,65 @@ function renderProductsGrid(containerId = 'product-container', list = products) 
 function renderFeatured() {
   const featured = products.slice(0, 4);
   renderProductsGrid('featured-container', featured);
+}
+
+// --- Categories page support ---
+function getCategories() {
+  const cats = {};
+  products.forEach(p => {
+    cats[p.category] = (cats[p.category] || 0) + 1;
+  });
+  return cats;
+}
+
+function renderCategoriesList() {
+  const el = document.getElementById('categories-list');
+  if (!el) return;
+  const cats = getCategories();
+  el.innerHTML = '';
+  Object.keys(cats).forEach(cat => {
+    const card = document.createElement('div');
+    card.className = 'bg-white rounded-lg shadow p-4 flex flex-col items-center text-center';
+    card.innerHTML = `
+      <div class="text-4xl">📦</div>
+      <h3 class="font-semibold mt-2">${cat}</h3>
+      <div class="text-sm text-gray-600 mt-1">${cats[cat]} products</div>
+      <button class="mt-3 bg-indigo-600 text-white px-3 py-1 rounded" data-cat="${cat}">View</button>
+    `;
+    el.appendChild(card);
+    const btn = card.querySelector('button');
+    btn.addEventListener('click', () => {
+      selectCategory(cat);
+      // update URL param
+      history.replaceState(null, '', `categories.html?category=${encodeURIComponent(cat)}`);
+    });
+  });
+}
+
+function selectCategory(cat) {
+  const heading = document.getElementById('category-heading');
+  if (heading) heading.textContent = `${cat} Products`;
+  const filtered = products.filter(p => p.category === cat);
+  renderProductsGrid('category-products', filtered);
+}
+
+function initCategoriesPage() {
+  renderCategoriesList();
+  // if URL has category param, preselect
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get('category');
+  if (cat) selectCategory(cat);
+  // show all
+  const showAll = document.getElementById('show-all-btn');
+  if (showAll) {
+    showAll.addEventListener('click', () => {
+      document.getElementById('category-heading').textContent = 'All Products';
+      renderProductsGrid('category-products', products);
+      history.replaceState(null, '', 'categories.html');
+    });
+  }
+  // initial default: show all
+  renderProductsGrid('category-products', products);
 }
 
 // Product details page rendering
@@ -341,6 +440,11 @@ function init() {
   // order success page
   if (document.getElementById('order-success')) {
     renderOrderSuccess();
+  }
+
+  // categories page
+  if (document.getElementById('categories-list') || document.getElementById('category-products')) {
+    initCategoriesPage();
   }
 
   // Newsletter forms handling (homepage and footer)
