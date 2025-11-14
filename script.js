@@ -393,6 +393,23 @@ function renderOrderSuccess() {
 // Initialize page-specific renderers
 function init() {
   updateCartCount();
+  
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileNavDropdown = document.getElementById('mobile-nav-dropdown');
+  if (mobileMenuBtn && mobileNavDropdown) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileNavDropdown.classList.contains('hidden');
+      if (isHidden) {
+        mobileNavDropdown.classList.remove('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      } else {
+        mobileNavDropdown.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+  
   // products grid
   if (document.getElementById('product-container')) {
     renderProductsGrid('product-container', products);

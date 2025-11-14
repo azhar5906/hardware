@@ -4,36 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Hardware & Paints</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header>
-    <div class="logo">🛠 Hardware & Paints</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
+  <header class="bg-indigo-700 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="text-2xl font-bold">🛠 Hardware & Paints</div>
+        <nav class="hidden md:flex gap-4 ml-6" aria-label="Main navigation">
+          <a href="index.html" class="hover:underline">Home</a>
+          <a href="products.html" class="hover:underline">Products</a>
+          <a href="categories.html" class="hover:underline">Categories</a>
+          <a href="contact.html" class="hover:underline" aria-current="page">Contact</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-4">
+        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center bg-indigo-600 p-2 rounded" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+        <a href="cart.html" id="cart-link" class="relative inline-flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
+          </svg>
+          <span class="sr-only">Cart</span>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+        </a>
+      </div>
+    </div>
+    <nav id="mobile-nav-dropdown" class="hidden md:hidden bg-indigo-600 px-4 py-3 space-y-2" aria-label="Mobile navigation">
+      <a href="index.html" class="block py-2 hover:underline">Home</a>
+      <a href="products.html" class="block py-2 hover:underline">Products</a>
+      <a href="categories.html" class="block py-2 hover:underline">Categories</a>
+      <a href="contact.html" class="block py-2 hover:underline" aria-current="page">Contact</a>
     </nav>
   </header>
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Address:</strong> 123 Main Street, Hyderabad, India</p>
-    <p><strong>Phone:</strong> +91 98765 43210</p>
-    <p><strong>Email:</strong> info@ hardware.com</p>
+  <main id="main" class="max-w-6xl mx-auto px-4 py-8">
+    <section class="bg-white rounded-lg shadow p-6">
+      <h1 class="text-3xl font-bold mb-6">Contact Us</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-xl font-semibold mb-4">Get in Touch</h2>
+          <p class="mb-3"><strong>Address:</strong> 123 Main Street, Hyderabad, India</p>
+          <p class="mb-3"><strong>Phone:</strong> +91 98765 43210</p>
+          <p class="mb-3"><strong>Email:</strong> info@hardware.com</p>
+        </div>
+        <div>
+          <h2 class="text-xl font-semibold mb-4">Send us a Message</h2>
+          <form class="contact-form space-y-3">
+            <div>
+              <input type="text" placeholder="Your Name" required class="w-full px-3 py-2 border rounded" />
+            </div>
+            <div>
+              <input type="email" placeholder="Your Email" required class="w-full px-3 py-2 border rounded" />
+            </div>
+            <div>
+              <textarea placeholder="Your Message" required class="w-full px-3 py-2 border rounded" rows="4"></textarea>
+            </div>
+            <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded font-semibold">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <form action="#" class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Hardware & Paints</p>
+  <footer class="bg-indigo-800 text-white mt-12">
+    <div class="max-w-6xl mx-auto px-6 py-6 text-center">
+      <p>© 2025 Hardware & Paints — All rights reserved</p>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
