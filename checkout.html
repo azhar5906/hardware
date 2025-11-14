@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Checkout - Hardware & Paints" />
+    <title>Checkout | Hardware & Paints</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="bg-indigo-700 text-white">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="text-2xl font-bold">🛠 Hardware & Paints</div>
+        <nav class="hidden md:flex gap-4">
+          <a href="index.html" class="hover:underline">Home</a>
+          <a href="products.html" class="hover:underline">Products</a>
+          <a href="cart.html" class="hover:underline">Cart</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="max-w-6xl mx-auto px-4 py-8">
+      <h1 class="text-2xl font-bold mb-4">Checkout</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h2 class="font-semibold mb-3">Shipping & Contact</h2>
+          <form id="checkout-form" class="space-y-3">
+            <div>
+              <label class="block text-sm font-medium">Full name</label>
+              <input name="name" required class="mt-1 w-full px-3 py-2 border rounded" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Email</label>
+              <input name="email" type="email" required class="mt-1 w-full px-3 py-2 border rounded" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Phone</label>
+              <input name="phone" required class="mt-1 w-full px-3 py-2 border rounded" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Address</label>
+              <textarea name="address" required class="mt-1 w-full px-3 py-2 border rounded" rows="3"></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Payment method</label>
+              <select name="payment" class="mt-1 w-full px-3 py-2 border rounded">
+                <option value="cod">Cash on Delivery</option>
+                <option value="card">Card (mock)</option>
+                <option value="upi">UPI (mock)</option>
+              </select>
+            </div>
+
+            <div class="pt-3">
+              <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded">Place Order</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h2 class="font-semibold mb-3">Order Summary</h2>
+          <div id="checkout-summary" class="space-y-3">
+            <!-- JS will populate cart summary -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-indigo-700 text-white py-6 mt-12">
+      <div class="max-w-6xl mx-auto px-4 text-center">© 2025 Hardware & Paints</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

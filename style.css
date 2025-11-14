@@ -6,6 +6,7 @@ body {
 }
 
 header {
+  /* legacy styles kept for non-tailwind fallbacks */
   background: #004aad;
   color: #fff;
   display: flex;
@@ -50,6 +51,27 @@ nav a:hover {
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* Accessibility: visually hidden skip link shown on focus */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: #111827;
+  color: #fff;
+  border-radius: 4px;
+  z-index: 9999;
 }
 
 .categories {

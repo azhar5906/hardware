@@ -1,50 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Hardware & Paints</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hardware & Paints - Tools, paints and electricals for home and industry. Shop drills, hammers, bulbs and more." />
+    <title>Hardware & Paints</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-  <header>
-    <div class="logo">🛠 Hardware & Paints</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Your One-Stop Store for Hardware, Paints & Electricals</h1>
-    <p>Everything for Home & Industry under one roof.</p>
-    <a href="products.html" class="btn">View Catalogue</a>
-  </section>
-
-  <section class="categories">
-    <h2>Our Categories</h2>
-    <div class="category-container">
-      <div class="category-card">
-        <img src="https://picsum.photos/400/300?hardware" alt="Hardware">
-        <h3>Hardware</h3>
+    <header class="bg-indigo-700 text-white">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="text-2xl font-bold">🛠 Hardware & Paints</div>
+          <nav class="hidden md:flex gap-4 ml-6" aria-label="Main navigation">
+            <a href="index.html" class="hover:underline" aria-current="page">Home</a>
+            <a href="products.html" class="hover:underline">Products</a>
+            <a href="about.html" class="hover:underline">About</a>
+            <a href="contact.html" class="hover:underline">Contact</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="products.html" class="hidden md:inline-block bg-white text-indigo-700 px-4 py-2 rounded font-semibold">Shop Now</a>
+          <a href="cart.html" id="cart-link" class="relative inline-flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
+            </svg>
+            <span class="sr-only">Cart</span>
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+          </a>
+        </div>
       </div>
-      <div class="category-card">
-        <img src="https://picsum.photos/400/300?paint" alt="Paints">
-        <h3>Paints</h3>
-      </div>
-      <div class="category-card">
-        <img src="https://picsum.photos/400/300?electrical" alt="Electricals">
-        <h3>Electricals</h3>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <footer>
-    <p>© 2025  Hardware & Paints | All Rights Reserved</p>
-  </footer>
+    <main id="main" class="max-w-6xl mx-auto px-4 py-8">
+      <section class="bg-gradient-to-r from-indigo-600 to-sky-500 text-white rounded-lg p-8 mb-8">
+        <div class="md:flex md:items-center md:justify-between">
+          <div>
+            <h1 class="text-3xl md:text-4xl font-extrabold">Your One-Stop Store for Hardware, Paints & Electricals</h1>
+            <p class="mt-3 text-lg">Quality tools, trusted brands, fast delivery — everything for home and industry.</p>
+            <div class="mt-4">
+              <a href="products.html" class="inline-block bg-white text-indigo-700 px-5 py-3 rounded-md font-semibold">Browse Catalogue</a>
+            </div>
+          </div>
+          <div class="mt-6 md:mt-0">
+            <img src="https://picsum.photos/520/320?hardware" alt="Tools" class="rounded-lg shadow-xl w-full md:w-[520px]" loading="lazy" />
+          </div>
+        </div>
+      </section>
 
-</body>
+      <section class="mb-10">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-2xl font-bold">Featured Products</h2>
+          <a href="products.html" class="text-indigo-600 hover:underline">See all products →</a>
+        </div>
+        <div id="featured-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-4">Categories</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+            <img src="https://picsum.photos/400/300?hardware" alt="Hardware" class="rounded mb-3 w-full h-40 object-cover" loading="lazy" />
+            <h3 class="font-semibold">Hardware</h3>
+          </div>
+          <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+            <img src="https://picsum.photos/400/300?paint" alt="Paints" class="rounded mb-3 w-full h-40 object-cover" loading="lazy" />
+            <h3 class="font-semibold">Paints</h3>
+          </div>
+          <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+            <img src="https://picsum.photos/400/300?electrical" alt="Electricals" class="rounded mb-3 w-full h-40 object-cover" loading="lazy" />
+            <h3 class="font-semibold">Electricals</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits / trust -->
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-4">Why shop with us</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow text-center">
+            <div class="text-3xl">🚚</div>
+            <h3 class="font-semibold mt-2">Fast Delivery</h3>
+            <p class="text-sm text-gray-600 mt-1">Same-day dispatch for local orders and quick nationwide shipping.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow text-center">
+            <div class="text-3xl">🔒</div>
+            <h3 class="font-semibold mt-2">Secure Payments</h3>
+            <p class="text-sm text-gray-600 mt-1">Multiple payment options and safe checkout.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow text-center">
+            <div class="text-3xl">⭐</div>
+            <h3 class="font-semibold mt-2">Quality Guarantee</h3>
+            <p class="text-sm text-gray-600 mt-1">Top brands and product warranties available.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-4">What our customers say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <p class="text-gray-700">"Fast delivery and the drill I bought works like a charm. Highly recommended!"</p>
+            <div class="mt-3 text-sm text-gray-600">— Priya R.</div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <p class="text-gray-700">"Great selection of paints, the finish was superb and easy to apply."</p>
+            <div class="mt-3 text-sm text-gray-600">— Amit K.</div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <p class="text-gray-700">"Customer service helped me pick the right ladder for my workshop."</p>
+            <div class="mt-3 text-sm text-gray-600">— Sunita P.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section class="mb-10 bg-indigo-600 text-white p-6 rounded-lg">
+        <div class="md:flex md:items-center md:justify-between">
+          <div>
+            <h2 class="text-2xl font-bold">Join our newsletter</h2>
+            <p class="mt-1 text-sm">Get special offers, product launches and discounts.</p>
+          </div>
+          <form id="newsletter-form" class="mt-4 md:mt-0 flex gap-2">
+            <input name="email" type="email" placeholder="Your email" required class="px-3 py-2 rounded text-gray-800" />
+            <button class="bg-white text-indigo-700 px-4 py-2 rounded font-semibold">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-indigo-800 text-white mt-12">
+      <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div>
+          <div class="text-2xl font-bold">🛠 Hardware & Paints</div>
+          <p class="mt-2 text-sm text-indigo-100">Quality tools, paints and electricals delivered across the country.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Shop</h4>
+          <ul class="mt-2 space-y-1 text-sm">
+            <li><a href="products.html" class="hover:underline">Products</a></li>
+            <li><a href="products.html" class="hover:underline">Categories</a></li>
+            <li><a href="about.html" class="hover:underline">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold">Support</h4>
+          <ul class="mt-2 space-y-1 text-sm">
+            <li><a href="contact.html" class="hover:underline">Contact</a></li>
+            <li><a href="#" class="hover:underline">Shipping</a></li>
+            <li><a href="#" class="hover:underline">Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold">Newsletter</h4>
+          <p class="text-sm mt-2">Sign up for special offers and updates.</p>
+          <form id="footer-newsletter-form" class="mt-3 flex gap-2">
+            <input name="email" type="email" placeholder="you@example.com" required class="px-3 py-2 rounded text-gray-800 w-full" />
+            <button class="bg-indigo-600 text-white px-3 py-2 rounded">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="border-t border-indigo-700">
+        <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm">
+          <div>© 2025 Hardware & Paints — All rights reserved</div>
+          <div class="mt-3 md:mt-0 text-sm text-indigo-100">Follow us: <a class="underline" href="#">Facebook</a> • <a class="underline" href="#">Instagram</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

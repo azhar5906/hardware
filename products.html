@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | Hardware & Paints</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse products — Hardware & Paints online catalogue. Tools, paint buckets, electrical goods and accessories." />
+    <title>Products | Hardware & Paints</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-  <header>
-    <div class="logo">🛠 Hardware & Paints</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header class="bg-indigo-700 text-white">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="text-2xl font-bold">🛠 Hardware & Paints</div>
+        <nav class="hidden md:flex gap-4" aria-label="Main navigation">
+          <a href="index.html" class="hover:underline">Home</a>
+          <a href="products.html" class="hover:underline" aria-current="page">Products</a>
+          <a href="contact.html" class="hover:underline">Contact</a>
+          <a href="cart.html" class="hover:underline">Cart</a>
+        </nav>
+        <a href="cart.html" class="relative">
+          <span class="sr-only">Cart</span>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+        </a>
+      </div>
+    </header>
 
-  <section class="products">
-    <h2>Our Product Catalogue</h2>
-    <div id="product-container" class="product-grid"></div>
-  </section>
+    <main id="main" class="max-w-6xl mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-4">Our Product Catalogue</h1>
+      <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+    </main>
 
-  <footer>
-    <p>© 2025 Hardware & Paints</p>
-  </footer>
+    <footer class="bg-indigo-700 text-white py-6 mt-12">
+      <div class="max-w-6xl mx-auto px-4 text-center">© 2025 Hardware & Paints</div>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
